@@ -66,13 +66,13 @@ def index():  # Twitch API Integration
     action = request.args.get('action')
     access_code = request.args.get('uuid')
     if code is not None:
-        response_access_data = requests.post('https://id.twitch.tv/oauth2/token?client_id=30pnsqm8mnjstg23mto3e9hfgaymdt&client_secret=4z8l0pwmvhso3nurfoaphbba9ucgms&code=' +
+        response_access_data = requests.post('https://id.twitch.tv/oauth2/token?client_id=[client id]]&client_secret=[client secret]&code=' +
                                              code + '&grant_type=authorization_code&redirect_uri=' + url)
         try:
             access_token = json.loads(response_access_data.text)[
                 'access_token']
             response_user_data = requests.get('https://api.twitch.tv/helix/users', headers={
-                'Authorization': 'Bearer ' + access_token, 'Client-ID': '30pnsqm8mnjstg23mto3e9hfgaymdt'})
+                'Authorization': 'Bearer ' + access_token, 'Client-ID': 'client id'})
             session['user_id'] = json.loads(response_user_data.text)[
                 'data'][0]['id']
             session['user_display'] = json.loads(response_user_data.text)[
