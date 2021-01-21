@@ -28,7 +28,7 @@ Queue | Displays the queue | Viewer
 
 ## The code
 > About 85% of the code for HTML and CSS was done with a generator. I wish I had the time to learn HTML and CSS but alas I wanted to finish the project before the semester started.
-Enjoy the sweet Python code, this was my first time using Flask and I think it went well.
+Enjoy the sweet Python code, considering this was my first time using Flask and completing the project in just a couple days I think it went well.
 
 ## Login and Customization Images
 <img src="https://i.imgur.com/L2LLcch.png" width="75%">
