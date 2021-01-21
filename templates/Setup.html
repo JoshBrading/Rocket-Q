@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <style>
+      body {font-family: Arial, Helvetica, sans-serif;}
+      * {box-sizing: border-box;}
+      
+      /* Button used to open the contact form - fixed at the bottom of the page */
+      .open-button {
+        background-color: #555;
+        color: rgb(0, 0, 0);
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        opacity: 0.8;
+        position: fixed;
+        bottom: 23px;
+        right: 28px;
+        width: 280px;
+      }
+      
+      /* The popup form - hidden by default */
+      .form-popup {
+        display: none;
+        bottom: 0;
+        right: 15px;
+        border: 3px solid #1e1e1e;
+        z-index: 9;
+        position: absolute;
+        max-width: auto;
+        min-height: 750px;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      /* Add styles to the form container */
+      .form-container {
+        max-width: auto;
+        padding: 10px;
+        background-color: #1e1e1e;
+      }
+      
+      /* Full-width input fields */
+      .form-container input[type=text], .form-container input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #1e1e1e;
+      }
+      
+      /* When the inputs get focus, do something */
+      .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+        background-color: #1e1e1e;
+        outline: none;
+      }
+      
+      /* Set a style for the submit/login button */
+      .form-container .btn {
+        background-color: #1e1e1e;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom:10px;
+        opacity: 0.8;
+      }
+      
+      /* Add a red background color to the cancel button */
+      .form-container .cancel {
+        background-color: red;
+      }
+      
+      /* Add some hover effects to buttons */
+      .form-container .btn:hover, .open-button:hover {
+        opacity: 1;
+      }
+      </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Connect with Twitch!">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Rkt-Q</title>
+    <link rel="stylesheet" href="../static/nicepage.css" media="screen">
+    <link rel="stylesheet" href="../static/Index.css" media="screen">
+        <script class="u-script" type="text/javascript" src="../static/jquery.js" defer=""></script>
+        <script class="u-script" type="text/javascript" src="../static/nicepage.js" defer=""></script>
+        <meta name="generator" content="Nicepage 3.3.7, nicepage.com">
+        <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"url": "index.html",
+		"logo": "images/Discord.png"
+}</script>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rocket-q.tacki.xyz/">
+<meta property="og:title" content="Rocket-Q by Tacki">
+<meta name="theme-color" content="#834496">
+
+<meta property="og:description" content="Rocket-Q is a 1v1 queue system that enables streamers to setup a queue against viewers using their chat bot.">
+<meta property="og:image" content="/static/RKT-Q.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://rocket-q.tacki.xyz/">
+<meta property="twitter:title" content="Rocket-Q by Tacki">
+<meta property="twitter:description" content="Rocket-Q is a 1v1 queue system that enables streamers to setup a queue against viewers using their chat bot.">
+<meta property="twitter:image" content="/static/RKT-Q.png">
+
+  </head>
+  <body class="u-body"><header class="u-align-right u-clearfix u-header" id="sec-b983"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="#" class="u-image u-logo u-image-1" data-image-width="1000" data-image-height="1000">
+          <img src="../static/Discord.png" class="u-logo-image u-logo-image-1" data-image-width="63">
+        </a>
+        <nav class="u-align-right u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem;">
+            <a class="u-button-style u-nav-link" href="#">
+              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 302 302" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8a8f"></use></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-8a8f" x="0px" y="0px" viewBox="0 0 302 302" style="enable-background:new 0 0 302 302;" xml:space="preserve" class="u-svg-content"><g><rect y="36" width="302" height="30"></rect><rect y="236" width="302" height="30"></rect><rect y="136" width="302" height="30"></rect>
+</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">tacki.xyz</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-align-center u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">tacki.xyz</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section  class="u-align-center u-clearfix u-section-1" id="sec-c5db">
+      <div class="u-align-center u-clearfix u-sheet u-valign-top u-sheet-1">
+        <h2 class="u-text u-text-1">Welcome, {{ username }}!</h2>
+        <h3 class="u-text u-text-1">Setup Rocket-Q!</h3>
+        <div class="u-form u-form-1">
+          <form action="/submit" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
+            <input type="hidden" id="siteId" name="siteId" value="61722185">
+            <input type="hidden" id="pageId" name="pageId" value="53550901">
+            <div class="u-form-group u-form-group-1">
+              <label for="textarea-fbd2" class="u-label">Start message</label>
+              <textarea rows="1" cols="50" id="textarea-fbd2" name="start_message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="The queue has opened!">{{ start_message }}</textarea>
+            </div>
+            <div class="u-form-group u-form-group-2">
+              <label for="textarea-e104" class="u-label">Stop message</label>
+              <textarea placeholder="The queue has closed!" rows="1" cols="50" id="textarea-e104" name="stop_message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">{{ stop_message }}</textarea>
+            </div>
+            <div class="u-form-group u-form-group-3">
+              <label for="textarea-909e" class="u-label">Next queue (Use $user to input the players name)</label>
+              <textarea rows="1" cols="50" id="textarea-909e" name="next_queue" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="The next player in queue is $user!">{{ next_message }}</textarea>
+            </div>
+            <div class="u-form-group u-form-group-4">
+              <label for="textarea-88a0" class="u-label">Join queue (Use $user to input the players name)</label>
+              <textarea rows="1" cols="50" id="textarea-88a0" name="join_queue" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="$user has joined the queue!">{{ join_message }}</textarea>
+            </div>
+            <div class="u-form-group u-form-group-5">
+              <label for="textarea-b577" class="u-label">Leave queue (Use $user to input the players name)</label>
+              <textarea placeholder="$user has left the queue!" rows="1" cols="50" id="textarea-b577" name="leave_queue" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">{{ leave_message }}</textarea>
+            </div>
+            <div class="u-form-group u-form-group-6">
+              <label for="textarea-8e33" class="u-label">Queue message (Use $list to list the players in queue)</label>
+              <textarea rows="1" cols="50" id="textarea-8e33" name="queue_message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="The players in queue are $list!">{{ queue_message }}</textarea>
+            </div>
+            <div class="u-form-group u-form-group-7">
+              <label for="textarea-8e33" class="u-label">Queue empty message</label>
+              <textarea rows="1" cols="50" id="textarea-8e33" name="queue_empty_message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="The queue is empty.">{{ queue_empty_message }}</textarea>
+            </div>
+            <div class="u-form-checkbox u-form-group u-form-group-8">
+
+              {% if save_queue %}
+                <input type = "checkbox" id = "checkbox-8542" name = "save_queue" value = "1" checked>
+              {% else %}
+              <input type = "checkbox" id = "checkbox-8542" name = "save_queue" value = "1">
+              {% endif %}
+              <label for="checkbox-8542" class="u-label">Save queue (Useful when closing queue before games are done) </label>
+            </div>
+            <div class="u-align-left u-form-group u-form-submit">
+              <a id=process_input class="u-btn u-btn-submit u-button-style">Update</a>
+              <input type="submit" value="submit" class="u-form-control-hidden">
+            </div>
+          </form>
+          <form action="/commands" onclick="openForm()" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
+            <div class="u-align-left u-form-group u-form-submit">
+              <a id=process_input class="u-btn u-btn-submit u-button-style">Show commands</a>
+              <input type="submit" value="submit" class="u-form-control-hidden">
+            </div>
+          </form>
+        </div>
+    </section>
+    <body>
+      <div class="form-popup" id="myForm" style="background-color: #1e1e1e;">
+        <h3 style="text-align: center;" class="u-text u-text-1">Commands</h3>
+        <p style="text-align: center;">It is important that these commands stay private to prevent people from messing with the queue.<br>These commands should be added directly on the <a style="color: #875eda;" rel="noopener noreferrer" target="_blank" href="https://nightbot.tv/commands/custom">Nightbot</a> dashboard.</p>
+        <p style="text-align: center;" class="u-text u-text-2">Your uuid is  <span style="color:green">{{ access_code }}</span>. <span style="color:red">Do not share this with anyone!</span></p>   
+
+        <form method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
+          <input type="hidden" id="siteId" name="siteId" value="61722185">
+          <input type="hidden" id="pageId" name="pageId" value="53550901">
+          <div class="u-form-group u-form-group-1">
+            <label for="textarea-fbd2" class="u-label">Start command <span style="color: red;">[MOD]</span></label>
+            <textarea disabled style="resize: none; font-size: small;" rows="1" cols="50" id="textarea-fbd2" name="start_message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="The queue has opened!">$(urlfetch {{ url }}?channel_name=$(channel)&uuid={{ access_code }}&action=start)</textarea>
+          </div>
+          <div class="u-form-group u-form-group-2">
+            <label for="textarea-e104" class="u-label">Stop command <span style="color: red;">[MOD]</label>
+            <textarea disabled style="resize: none; font-size:small;" placeholder="The queue has closed!" rows="1" cols="50" id="textarea-e104" name="stop_message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">$(urlfetch {{ url }}?channel_name=$(channel)&uuid={{ access_code }}&action=stop)</textarea>
+          </div>
+          <div class="u-form-group u-form-group-3">
+            <label for="textarea-909e" class="u-label">Next command <span style="color: red;">[MOD]</label>
+            <textarea disabled style="resize: none; font-size: small;" rows="1" cols="50" id="textarea-909e" name="next_queue" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="The next player in queue is $user!">$(urlfetch {{ url }}?channel_name=$(channel)&uuid={{ access_code }}&action=next)</textarea>
+          </div>
+          <div class="u-form-group u-form-group-4">
+            <label for="textarea-88a0" class="u-label">Join command</label>
+            <textarea disabled style="resize: none; font-size: small;" rows="1" cols="50" id="textarea-88a0" name="join_queue" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="$user has joined the queue!">$(urlfetch {{ url }}?channel_name=$(channel)&uuid={{ access_code }}&user=$(user)&action=join)</textarea>
+          </div>
+          <div class="u-form-group u-form-group-5">
+            <label for="textarea-b577" class="u-label">Leave command</label>
+            <textarea disabled style="resize: none; font-size: small;" placeholder="$user has left the queue!" rows="1" cols="50" id="textarea-b577" name="leave_queue" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">$(urlfetch {{ url }}?channel_name=$(channel)&uuid={{ access_code }}&user=$(user)&action=leave)</textarea>
+          </div>
+          <div class="u-form-group u-form-group-6">
+            <label for="textarea-8e33" class="u-label">Queue command</label>
+            <textarea disabled style="resize: none; font-size: small;" rows="1" cols="50" id="textarea-8e33" name="queue_message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="The players in queue are $list!">$(urlfetch {{ url }}?channel_name=$(channel)&uuid={{ access_code }}&action=queue)</textarea>
+          </div>
+          <div  onclick="closeForm()" class="u-align-left u-form-group u-form-submit">
+            <a id=process_input class="u-btn u-btn-submit u-button-style">Hide commands</a>
+            <input type="submit" value="submit" class="u-form-control-hidden">
+          </div>
+        </form>
+      </div>
+      
+      <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+      
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+      </script>
+      
+  </body>
+</html>
