@@ -24,7 +24,7 @@ Queue | Displays the queue | Viewer
 ## How to use
 
 > Feel free to download my code and self host or make modifications but if you prefer I currently host Rocket-Q myself for anyone to use
-[here](https://rocket-q.tacki.xyz/). The actual setup with Twitch is extremely easy, just connect Rocket-Q with Twitch and then customize your commands. Currently I just display the commands for Nightbot but this may change soon.
+[here](#) ( I am no longer hosting this project ). The actual setup with Twitch is extremely easy, just connect Rocket-Q with Twitch and then customize your commands. Currently I just display the commands for Nightbot but this may change soon.
 
 ## The code
 > About 85% of the code for HTML and CSS was done with a generator. I wish I had the time to learn HTML and CSS but alas I wanted to finish the project before the semester started.
